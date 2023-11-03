@@ -4,13 +4,9 @@
 #include <cstdio>
 #include <sstream>
 #include <string>
-#include "imgui.h"
 
-const unsigned int EDITOR_BUFFER_SIZE = 2048;
-
-
-inline void loadShaderSource(const char* path, char* dst) {
-    memset(dst, 0, sizeof(char) *  EDITOR_BUFFER_SIZE);
+inline void loadShaderSource(const char* path, char* dst, unsigned int size) {
+    memset(dst, 0, sizeof(char) *  size);
     std::ifstream stream(path, std::ios::in);
     std::string line = "";
     std::stringstream ss;

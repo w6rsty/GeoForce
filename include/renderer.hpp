@@ -3,16 +3,24 @@
 
 #include "camera.hpp"
 #include "geo.hpp"
+#include "renderer.hpp"
 #include "vertex_array.hpp"
 #include "index_buffer.hpp"
 #include "vertex_buffer.hpp"
 #include "texture.hpp"
 #include "shader.hpp"
-#include "glsl_loader.hpp"
-
 
 #define UINEXT ImGui::SameLine();
 #define UIDIVIDER ImGui::Separator();
+
+#define DISPLAY_BUFFER_SIZE 1024
+#define EDITOR_BUFFER_SIZE 2048
+
+#define vertexPath "../resources/shader/vertex.glsl"
+#define fragPath "../resources/shader/frag.glsl"
+#define texPath "../resources/img/image.png"
+#define fontPath1 "../resources/font/JetBrainsMonoNerdFontMono-Regular.ttf"
+#define fontPath2 "../resources/font/JetBrainsMonoNerdFontMono-SemiBold.ttf"
 
 class Renderer {
 private:
@@ -44,10 +52,11 @@ private:
     bool _is_editing;
     ShaderType _current_shader_src;
 
-    char _display_buffer[1024] = "";
     const float _light_bg = 0.8f;
     const float _dark_bg = 0.2f;
     float _clear_color;
+
+    char _display_buffer[DISPLAY_BUFFER_SIZE];
 
     enum Theme {
         Light =  0,
