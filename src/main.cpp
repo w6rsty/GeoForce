@@ -1,9 +1,7 @@
-#include "pch.hpp"
 #include "renderer.hpp"
 
-
 int main() {
-    Renderer rd(1600, 1000, "Calculator");
+    Renderer rd(1800, 1200, "Calculator");
     if (!rd.init()) {
         return EXIT_FAILURE;
     }

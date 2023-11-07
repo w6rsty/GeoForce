@@ -13,7 +13,7 @@ uniform vec3 viewPos;
 
 void main(void) {
     vec4 texColor = texture(samp, TexCoord);
-    float ambientStrength = 0.1;
+    float ambientStrength = 0.2;
     vec3 ambeint = ambientStrength * lightColor;
 
     vec3 norm = normalize(Normal);
@@ -22,7 +22,7 @@ void main(void) {
     float diff = max(dot(norm, lightDir), 0.0);
     vec3 diffuse = diff * lightColor;
 
-    float specularStrength = 0.5;
+    float specularStrength = 0.4;
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, norm);
 

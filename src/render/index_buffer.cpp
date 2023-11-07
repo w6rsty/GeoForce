@@ -6,6 +6,10 @@ IndexBuffer::IndexBuffer(const void* data, unsigned int count) {
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW);
 }
 
+void IndexBuffer::update(const void* data, unsigned int count) {
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_DYNAMIC_DRAW);
+}
+
 IndexBuffer::~IndexBuffer() {
     glDeleteBuffers(1, &buffer_id);
 }
