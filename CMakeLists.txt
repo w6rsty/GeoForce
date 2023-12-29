@@ -11,8 +11,8 @@ set(EXPORT_COMPILE_COMMANDS ON)
 target_compile_features(main PRIVATE cxx_std_17)
 target_include_directories(main PUBLIC include)
 target_include_directories(main PUBLIC include/render)
-target_include_directories(main PRIVATE include/anim)
 target_include_directories(main PRIVATE include/scene)
+target_include_directories(main PRIVATE include/anim)
 
 add_subdirectory(3rdlibs)
 

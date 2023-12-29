@@ -4,7 +4,7 @@ class Scene {
 public:
     Scene();
     virtual ~Scene();
-    virtual void onUpdate();
-    virtual void onRender();
+    virtual void onUpdate() = 0;
+    virtual void onRender() = 0;
     virtual void onImGuiRender();
 };

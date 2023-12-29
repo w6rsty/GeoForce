@@ -19,6 +19,7 @@
 #include "ui.hpp"
 #include "parser.hpp"
 #include "analyzer.hpp"
+#include "scene.hpp"
 
 #define UINEXT ImGui::SameLine();
 #define UIDIVIDER ImGui::Separator();
