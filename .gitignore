@@ -1,2 +1,4 @@
 build/
 .cache/
+3rdlibs
+!3rdlibs/CMakeLists.txt

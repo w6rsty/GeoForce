@@ -1,5 +1,0 @@
-aux_source_directory(./ IMGUI_SRC)
-add_library(imgui STATIC ${IMGUI_SRC})
-target_include_directories(imgui PUBLIC ./)
-target_compile_features(imgui PRIVATE cxx_std_17)
-target_include_directories(imgui PRIVATE ../glfw/include)
